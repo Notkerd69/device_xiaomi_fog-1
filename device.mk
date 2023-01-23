@@ -375,7 +375,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay-banana \
     ApertureOverlay \
     FogCarrierConfigOverlay \
     FogFrameworksOverlay \
