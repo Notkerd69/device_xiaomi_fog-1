@@ -89,7 +89,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>android.hardware.drm</name>
         <version>1.0</version>
         <interface>
@@ -97,7 +97,7 @@
             <instance>clearkey</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>android.hardware.wifi.hostapd</name>
         <version>1.0</version>
         <interface>
@@ -105,12 +105,20 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>android.hardware.wifi.supplicant</name>
         <version>1.0</version>
         <interface>
             <name>ISupplicant</name>
             <instance>clearkey</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.graphics.composer</name>
+        <version>2.1-4</version>
+        <interface>
+            <name>IComposer</name>
+            <instance>default</instance>
         </interface>
     </hal>
 </compatibility-matrix>
