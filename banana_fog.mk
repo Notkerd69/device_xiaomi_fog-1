@@ -13,6 +13,7 @@ $(call inherit-product, device/xiaomi/fog/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/banana/config/common.mk)
+BANANA_MAINTAINER := Notkerd69
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := banana_fog

@@ -76,6 +76,16 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_gesture"
 
+# FM
+BOARD_HAVE_QCOM_FM := true
+
+# HALs
+DEVICE_SPECIFIC_AUDIO_PATH := $(DEVICE_PATH)/hals/audio
+DEVICE_SPECIFIC_DISPLAY_PATH := $(DEVICE_PATH)/hals/display
+DEVICE_SPECIFIC_MEDIA_PATH := $(DEVICE_PATH)/hals/media
+QCOM_SOONG_NAMESPACE := $(DEVICE_PATH)/hals
+TARGET_USES_CUSTOM_DISPLAY_INTERFACE := true
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/hidl/xiaomi_framework_compatibility_matrix.xml
@@ -161,6 +171,13 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+
+# Properties
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 
 # device/qcom/common tree
 include $(COMMON_PATH)/BoardConfigQcom.mk
