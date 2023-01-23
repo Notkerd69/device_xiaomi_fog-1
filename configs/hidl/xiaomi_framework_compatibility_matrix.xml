@@ -91,7 +91,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.drm</name>
-        <version>1</version>
+        <version>1.0</version>
         <interface>
             <name>IDrmFactory</name>
             <instance>clearkey</instance>
@@ -99,7 +99,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.wifi.hostapd</name>
-        <version>1</version>
+        <version>1.0</version>
         <interface>
             <name>IHostapd</name>
             <instance>default</instance>
@@ -107,7 +107,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.wifi.supplicant</name>
-        <version>1</version>
+        <version>1.0</version>
         <interface>
             <name>ISupplicant</name>
             <instance>clearkey</instance>
