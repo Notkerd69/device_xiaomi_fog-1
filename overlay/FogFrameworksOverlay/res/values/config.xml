@@ -567,6 +567,20 @@
     <!-- The max scale for the wallpaper when it's zoomed in -->
     <item name="config_wallpaperMaxScale" format="float" type="dimen">1.00</item>
 
+    <!-- Enables or disables fading edges when marquee is enabled in TextView.
+         Off by default, since the framebuffer readback used to implement the
+         fading edges is prohibitively expensive on most GPUs. -->
+    <bool name="config_ui_enableFadingMarquee">true</bool>
+
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+
+    <!-- Whether device ignores the RSSNR signal implementation -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
+
     <!-- Whether the display cutout region of the main built-in display should be forced to
         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
     -->
