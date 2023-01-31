@@ -22,4 +22,19 @@
 
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
     <string translatable="false" name="def_device_name_simple">Redmi 10/10 Power</string>
+	
+	<!-- Disable bluetooth by default -->
+    <bool name="def_bluetooth_on">false</bool>
+    <!-- Set the automatic brightness mode on by default -->
+    <bool name="def_screen_brightness_automatic_mode">true</bool>
+    <!-- Default for Settings.Secure.WAKE_GESTURE_ENABLED -->
+    <bool name="def_wake_gesture_enabled">false</bool>
+    <!-- Default state of tap to wake -->
+    <bool name="def_double_tap_to_wake">false</bool>
+    <!-- Default setting for Settings.Global.MOBILE_DATA_ALWAYS_ON -->
+    <bool name="def_mobile_data_always_on">false</bool>
+
+    <!-- Speed up the animations -->
+    <fraction name="def_window_animation_scale">50%</fraction>
+    <fraction name="def_window_transition_scale">50%</fraction>
 </resources>
