@@ -564,7 +564,10 @@
          strictly needed. -->
     <bool name="config_sf_limitedAlpha">true</bool>
 
-<!-- Whether the display cutout region of the main built-in display should be forced to
+    <!-- The max scale for the wallpaper when it's zoomed in -->
+    <item name="config_wallpaperMaxScale" format="float" type="dimen">1.00</item>
+
+    <!-- Whether the display cutout region of the main built-in display should be forced to
         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
     -->
     <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
