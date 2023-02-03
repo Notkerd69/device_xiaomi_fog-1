@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bootleg_fog.mk
+    $(LOCAL_DIR)/xtended_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    bootleg_fog-user \
-    bootleg_fog-userdebug \
-    bootleg_fog-eng
+    xtended_fog-user \
+    xtended_fog-userdebug \
+    xtended_fog-eng

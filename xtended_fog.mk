@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := bootleg_fog
+PRODUCT_NAME := xtended_fog
 PRODUCT_DEVICE := fog
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 10C
@@ -31,8 +31,8 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_USES_AOSP_CHARGER := true
-TARGET_USES_AOSP_RECOVERY := true
+XTENDED_BUILD_MAINTAINER := Notkerd69
+PROCESSOR_MODEL := SM6225
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="raven-user 13 TQ1A.230105.002 9325679 release-keys"
