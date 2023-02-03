@@ -176,10 +176,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Screen density
-TARGET_SCREEN_DENSITY := 399
+TARGET_SCREEN_DENSITY := 360
 
 # Security patch level
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+VENDOR_SECURITY_PATCH := 2022-06-01
 
 # Sepolicy
 -include device/xiaomi/fog/sepolicy/fog-sepolicy.mk
