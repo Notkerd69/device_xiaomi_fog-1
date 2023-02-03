@@ -156,9 +156,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,com.xiaomi.cameratest \
-    vendor.camera.aux.packagelist.ext=org.codeaurora.snapcam,com.android.camera,com.google.camera
+    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 
 PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=1
@@ -211,13 +209,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    ro.surface_flinger.running_without_sync_framework=true \
-    vendor.perf.gestureflingboost.enable=1 \
-    ro.surface_flinger.use_color_management=true \
-    ro.surface_flinger.max_virtual_display_dimension=4096 \
-    ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.has_wide_color_display=true \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+    ro.surface_flinger.max_virtual_display_dimension=4096
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.sf.force_hwc_brightness=1
@@ -337,20 +329,13 @@ PRODUCT_PACKAGES += \
 
 # LMK
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.lmk.use_psi=false \
-    ro.lmk.psi_partial_stall_ms=800 \
-    ro.lmk.psi_complete_stall_ms=1600 \
     ro.lmk.kill_timeout_ms=100 \
     ro.lmk.use_minfree_levels=true \
+    ro.lmk.psi_complete_stall_ms=70 \
     ro.lmk.swap_free_low_percentage=20 \
     ro.lmk.swap_util_max=90 \
     ro.lmk.thrashing_limit=30 \
-    ro.lmk.thrashing_limit_decay=50 \
-    ro.lmk.thrashing_min_score_adj=0 \
-    ro.lmk.debug=false \
-    ro.lmk.log_stats=false \
-    persist.sys.lmk.reportkills=false \
-    sys.lmk.reportkills=false
+    ro.lmk.thrashing_limit_decay=50
 
 # Media
 PRODUCT_ODM_PROPERTIES += \
@@ -366,7 +351,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.enable-player=true \
     media.stagefright.enable-qcp=true \
     media.stagefright.enable-scan=true \
-	media.stagefright.thumbnail.prefer_hw_codecs=true \
     mmp.enable.3g2=true \
     persist.mm.enable.prefetch=true
 
@@ -591,105 +575,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.wlan.dbs=2 \
     ro.telephony.iwlan_operation_mode=legacy
 
-# IORap
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.iorapd.enable=true	
-
-# Zram
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.zram.mark_idle_delay_mins=60 \
-    ro.zram.first_wb_delay_mins=180 \
-    ro.zram.periodic_wb_delay_hours=24 \
-	persist.service.pcsync.enable=0 \
-    persist.service.lgospd.enable=0
-
-# Performance
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.vendor.qti.core.ctl_max_cpu=4 \
-    ro.vendor.qti.core.ctl_min_cpu=2 \
-    touch.pressure.scale=0.001 \
-    persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false \
-    persist.sys.fuse.passthrough.enable=true \
-    persist.device_config.runtime_native.usap_pool_enabled=true \
-    debug.egl.hw=1 \
-    video.accelerate.hw=1 \
-    view.scroll_friction=0 \
-    pm.dexopt.bg-dexopt=speed-profile \
-    pm.dexopt.shared=speed \
-	persist.sys.dalvik.hyperthreading=true \
-    persist.sys.dalvik.multithread=true \
-	debug.enabletr=true \
-    hwui.render_dirty_regions=false \
-    persist.sys.ui.hw=1 \
-    ro.sf.compbypass.enable=0 \
-    debug.hwui.renderer=skiagl \
-    debug.renderengine.backend=skiaglthreaded \
-    renderthread.skia.reduceopstasksplitting=true \
-    debug.composition.type=gpu \
-    persist.sys.composition.type=gpu \
-    hw2d.force=1 \
-    hw3d.force=1 \
-    debug.egl.force_msaa=true \
-	boot.fps=20 \
-    persist.sys.purgeable_assets=1 \
-	debug.egl.buffcount=4 \
-	dalvik.gc.type=precise \
-    dalvik.vm.minidebuginfo=false \
-    dalvik.vm.dex2oat-minidebuginfo=false \
-    ro.statsd.enable=false \
-    persist.vendor.dpm.loglevel=0 \
-    persist.vendor.dpmhalservice.loglevel=0 \
-	persist.sys.ssr.enable_ramdumps=1 \
-    debug.mdpcomp.logs=0 \
-	ro.min_pointer_dur=0.0000001 \
-    ro.product.multi_touch_enabled=true \
-    touch.deviceType=pointer \
-    view.touch_slop=5
-
-# Battery Saving
-PRODUCT_SYSTEM_PROPERTIES += \
-    pm.sleep_mode=1 \
-    pm.power.saving.mode=1 \
-    pm.power.extreme.saving.mode=1 \
-    power.saving.mode=1 \
-    power.extreme.saving.mode=1 \
-    power_supply.wakeup=enable \
-    ro.mtk_bg_power_saving_ui=1 \
-    ro.vold.umsdirtyratio=20 \
-    ro.ril.power_collapse=1 \
-    ro.ril.disable.power.collapse=0 \
-    ro.ril.fast.dormancy.rule=0 \
-    ro.sys.battery_saver=1 \
-    ro.config.hw_power_saving=1 \
-    ro.config.hw_power_extreme_saving=1 \
-    ro.config.hw_fast_dormancy=1 \
-    ro.semc.enable.fast_dormancy=true \
-    ro.config.hw_quickpoweron=true \
-    ro.mot.eri.losalert.delay=1000 \
-    ro.ril.sensor.sleep.control=1 \
-    persist.sys.shutdown.mode=hibernate \
-    persist.radio.add_power_save=1 \
-    persist.sys.use_8bpp_alpha=1 \
-    wifi.supplicant_scan_interval=350
-
-# Close Logd
-    persist.logd.limit=OFF \
-    persist.logd.size=65536 \
-    persist.logd.size.crash=1M \
-    persist.logd.size.radio=1M \
-    persist.logd.size.system=1M \
-    log.tag.stats_log=OFF \
-    ro.logd.size=0 \
-    persist.traced.enable=0 \
-    persist.traced_perf.enable=0 \
-    vendor.vidc.debug.level=0 \
-    vidc.debug.level=0 \
-    ro.vendor.dfps.enable=false \
-    ro.vendor.smart_dfps.enable=false \
-    ro.vendor.display.default_fps=120 \
-    persist.vendor.dfps.level=120
-
 # Zygote
 PRODUCT_SYSTEM_PROPERTIES += \
-    zygote.critical_window.minute=10 \
-	persist.device_config.runtime_native.usap_pool_enabled=true
+    zygote.critical_window.minute=10
